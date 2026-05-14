@@ -7,12 +7,12 @@ from api.models import Artist, Album, Track
 
 
 class Command(BaseCommand):
-    help = "Завантаження даних із плейлиста Deezer (повністю безпечна версія)"
+    help = "Завантаження даних із плейлиста Deezer"
 
     def handle(self, *args, **kwargs):
 
-        playlist_id = "10423097922"
-        url = f"https://api.deezer.com/playlist/{playlist_id}"
+        playlist_id = "10423097922" # тут можна поставити будь-який інший айді
+        url = f"https://api.deezer.com/playlist/{playlist_id}" # дізер надає зручне апі
 
         response = requests.get(url)
 
