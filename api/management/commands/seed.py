@@ -1,5 +1,7 @@
 # https://api.deezer.com/playlist/10423097922
 
+# заповнення запускаємо командою python manage.py seed
+
 import requests
 
 from django.core.management.base import BaseCommand
