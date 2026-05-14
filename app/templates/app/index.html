@@ -1,0 +1,74 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Alex Flow</h1>
+    <p class="lead">REST API на Django REST Framework</p>
+    <hr>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <!-- Artists -->
+        <h2>Виконавці (Artists)</h2>
+        <div class="list-group mb-4">
+            <a href="/api/v1/artists/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/artists/</h5>
+                <p class="mb-0">Список усіх виконавців</p>
+            </a>
+
+            <a href="/api/v1/artists/1/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/artists/{id}/</h5>
+                <p class="mb-0">Детальна інформація про виконавця</p>
+            </a>
+
+            <a href="/api/v1/artists/1/albums/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/artists/{id}/albums/</h5>
+                <p class="mb-0">Усі альбоми виконавця</p>
+            </a>
+
+            <a href="/api/v1/artists/1/tracks/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/artists/{id}/tracks/</h5>
+                <p class="mb-0">Усі треки виконавця</p>
+            </a>
+        </div>
+
+        <!-- Albums -->
+        <h2>Альбоми (Albums)</h2>
+        <div class="list-group mb-4">
+            <a href="/api/v1/albums/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/albums/</h5>
+                <p class="mb-0">Список усіх альбомів</p>
+            </a>
+
+            <a href="/api/v1/albums/1/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/albums/{id}/</h5>
+                <p class="mb-0">Детальна інформація про альбом</p>
+            </a>
+
+            <a href="/api/v1/albums/1/tracks/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/albums/{id}/tracks/</h5>
+                <p class="mb-0">Треки альбому</p>
+            </a>
+        </div>
+
+        <!-- Tracks -->
+        <h2>Треки (Tracks)</h2>
+        <div class="list-group mb-4">
+            <a href="/api/v1/tracks/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/tracks/</h5>
+                <p class="mb-0">Список усіх треків</p>
+            </a>
+
+            <a href="/api/v1/tracks/1/" class="list-group-item list-group-item-action">
+                <h5>GET /api/v1/tracks/{id}/</h5>
+                <p class="mb-0">Детальна інформація про трек</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
