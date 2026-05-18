@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 
 from .models import Artist, Album, Track, Genre
 
-# ====================== ARTISTS ======================
+# ====================== ВИКОНАВЦІ ======================
 
 @api_view(['GET'])
 def artist_list(request):
@@ -95,7 +95,7 @@ def artist_create(request):
     }, status=status.HTTP_201_CREATED)
 
 
-# ====================== ALBUMS ======================
+# ====================== АЛЬБОМИ ======================
 
 @api_view(['GET'])
 def album_list(request):
@@ -138,7 +138,7 @@ def album_tracks(request, pk):
     return Response(data)
 
 
-# ====================== TRACKS ======================
+# ====================== ТРЕКИ ======================
 
 @api_view(['GET'])
 def track_list(request):
@@ -172,7 +172,7 @@ def track_detail(request, pk):
     return Response(data)
 
 
-# ====================== GENRES ======================
+# ====================== ЖАНРИ ======================
 
 @api_view(['GET'])
 def genre_list(request):
