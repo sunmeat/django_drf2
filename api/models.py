@@ -6,6 +6,8 @@
 # python manage.py migrate
 # python -m pip install Pillow (опційно)
 
+# python manage.py seed
+
 from django.db import models
 from django.utils.text import slugify
 
